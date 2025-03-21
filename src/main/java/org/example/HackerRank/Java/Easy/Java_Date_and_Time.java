@@ -1,18 +1,9 @@
 package org.example.HackerRank.Java.Easy;
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
+import java.util.Calendar;
 
-class Java_Date_and_Time {
+class Solution {
 
     /*
      * Complete the 'findDay' function below.
@@ -40,7 +31,7 @@ class Java_Date_and_Time {
 
 }
 
-public class Solution {
+public class Java_Date_and_Time {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
@@ -53,7 +44,7 @@ public class Solution {
 
         int year = Integer.parseInt(firstMultipleInput[2]);
 
-        String res = Java_Date_and_Time.findDay(month, day, year);
+        String res = Solution.findDay(month, day, year);
 
         bufferedWriter.write(res);
         bufferedWriter.newLine();
