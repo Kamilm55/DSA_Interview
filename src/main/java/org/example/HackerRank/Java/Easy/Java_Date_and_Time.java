@@ -2,6 +2,7 @@ package org.example.HackerRank.Java.Easy;
 
 import java.io.*;
 import java.util.Calendar;
+import java.util.Locale;
 
 class Solution {
 
@@ -17,16 +18,9 @@ class Solution {
 
     public static String findDay(int month, int day, int year) {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month, day);
-        int dayWithInt =  calendar.getFirstDayOfWeek();
-        if(day < 7 )
+        calendar.set(year, month - 1, day); // Calendar months are 0-based (0 = January)
 
-
-            switch(dayWithInt){
-                case 1:
-                    System.out.println("Sunday");
-                    break;
-            }
+        return calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.ENGLISH).toUpperCase();
     }
 
 }
@@ -34,8 +28,13 @@ class Solution {
 public class Java_Date_and_Time {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        // Fallback to a default file if OUTPUT_PATH is null
+        String outputPath = System.getenv("OUTPUT_PATH");
+        if (outputPath == null) {
+            outputPath = "output.txt"; // Use a default file
+        }
 
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputPath));
         String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
         int month = Integer.parseInt(firstMultipleInput[0]);
