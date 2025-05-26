@@ -2,7 +2,10 @@ package org.example.DSA_Course.Algorithms.Search.Binary_Search;
 // https://www.youtube.com/watch?v=f6UU7V3szVw&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ
 public class Binary_Search_Theory {
     public static void main(String[] args) {
-        /*** Big O:
+
+        /***
+         * If given arr is sorted try binary search firstly to solve the problem!
+         * Big O:
          Time Complexity: O(log₂ n) Logarithmic
          Space Complexity: O(1) Constant
 
