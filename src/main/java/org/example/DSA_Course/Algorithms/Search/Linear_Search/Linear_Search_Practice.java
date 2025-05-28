@@ -1,6 +1,6 @@
 package org.example.DSA_Course.Algorithms.Search.Linear_Search;
 
-public class Linear_Search_Tasks {
+public class Linear_Search_Practice {
     public static void main(String[] args) {
         int[] arr = new int[]{ 897,53,6,-8,0,9,49,48,787};
         int[][] arr2d = new int[][]{
