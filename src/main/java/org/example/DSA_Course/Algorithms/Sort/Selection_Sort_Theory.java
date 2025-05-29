@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Selection_Sort_Theory {
     public static void main(String[] args) {
         int[] unsortedArr = new int[]{ 897,53,6,-8,0,9,49,48,787};
-        int[] sortedArr = new int[]{1,2,3,5,4};
+        int[] sortedArr = new int[]{1,2,3,4,5};
 
         System.out.println(Arrays.toString(selectionSort(unsortedArr)));
         System.out.println(Arrays.toString(selectionSort(sortedArr)));
