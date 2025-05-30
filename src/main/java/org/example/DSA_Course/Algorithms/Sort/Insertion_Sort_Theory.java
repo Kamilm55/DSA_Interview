@@ -9,8 +9,8 @@ import static org.example.DSA_Course.Algorithms.Sort.SortUtil.swap;
 public class Insertion_Sort_Theory {
     public static void main(String[] args) {
         // Why Insertion sort?
-        // 1. Steps get reduced if array is sorted (Same as buble)
-        // 2. Number of swaps reduced as compared to buble --> It mostly shifts elements instead of swapping them
+        // 1. Steps get reduced if array is sorted rather than selection sort
+        // 2. Number of swaps reduced as compared to buble
         // Used for smaller values of N. It is good for partially sorted array.
         // It takes part in hybrid sorting algorithms. (Merge sort-da istifade ede bilerik)
 

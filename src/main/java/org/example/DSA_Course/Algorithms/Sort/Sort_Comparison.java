@@ -15,7 +15,8 @@ public class Sort_Comparison {
         //| -----------------  | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
         //| **Insertion Sort** | - Efficient for small or nearly sorted arrays                                 | - Worst-case time is O(n²)                                                     |
         //|                    | - Stable sort                                                                 | - Not suitable for large datasets                                              |
-        //|                    | - Less number of swaps (more shifts)                                          |                                                                                |
+        //|                    | - Less number of swaps (more shifts),                                         |
+        //|                    | - It performs a single insertion (final swap) after finding the position.     |                                                                                |
         //|                    | - Used in hybrid sorting (e.g., Timsort, introsort)                           |                                                                                |
 
 
