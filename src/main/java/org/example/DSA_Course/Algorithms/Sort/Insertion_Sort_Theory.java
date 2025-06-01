@@ -17,7 +17,7 @@ public class Insertion_Sort_Theory {
         int[] unsortedArr = new int[]{ 897,53,6,-8,0,9,49,48,787};
         int[] sortedArr = new int[]{1,2,3,4,5};
 
-        System.out.println(Arrays.toString(insertionSort(unsortedArr)));
+        System.out.println(Arrays.toString(insertionSortOptimized(unsortedArr)));
         System.out.println(Arrays.toString(insertionSort(sortedArr)));
         /*** Big O
          * 1. Time Complexity --> Quadratic O(N^2)     // general unsorted array
@@ -44,4 +44,23 @@ public class Insertion_Sort_Theory {
 
         return arr;
     }
+
+    // Daha az swap edirik
+    private static int[] insertionSortOptimized(int[] arr){
+        for (int i = 1; i < arr.length - 1; i++){
+            int key = arr[i]; // Muqayise olunacaq element
+            int j = i - 1;
+
+            while (j >= 0 && arr[j] > key){
+                arr[j + 1] = arr[j];
+                j--;
+            }
+
+            arr[j + 1] = key;// Final shift, insert the key into right position
+        }
+
+        return arr;
+    }
+
+
 }
